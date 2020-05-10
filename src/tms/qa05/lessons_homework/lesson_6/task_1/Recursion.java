@@ -5,8 +5,8 @@ public class Recursion {
         int[] array = {1, 3, 5, 7, 9};
         getArray(array, 0 );
 
-        System.out.println("result :" + array);
-    }
+        System.out.println("result :" + array); // зачем эта строка? 
+    }// абзац
     private static void getArray(int[] array, int number) {
         if (number < array.length) {
             getArray(array, number + 1);
