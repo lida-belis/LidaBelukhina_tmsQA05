@@ -7,7 +7,7 @@ public class Recursion {
 
         System.out.println("result :" + array); // зачем эта строка? 
     }// абзац
-    private static void getArray(int[] array, int number) {
+    private static void getArray(int[] array, int number) { // getArray - метод с таким названием должен что-то возвращать, printArray будет правильным названием
         if (number < array.length) {
             getArray(array, number + 1);
             System.out.println(array[number]);
