@@ -3,6 +3,7 @@ package tms.qa05.lessons_homework.lesson_8.task_8;
 import java.util.HashSet;
 import java.util.Set;
 
+// +
 public class Task_8 {
     public static void main(String[] args) {
         Set<Shop> shops = new HashSet<>();
