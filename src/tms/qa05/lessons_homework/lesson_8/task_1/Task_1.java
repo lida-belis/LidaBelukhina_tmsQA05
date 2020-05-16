@@ -13,6 +13,7 @@ public class Task_1 {
         listOfName.add("Irina");
         listOfName.add("Yaroslav");
 
+        // вынеси получение имени от пользователя в отдельный метод
         Scanner scanner = new Scanner(System.in);
         System.out.println("Person: " );
         String string = scanner.next();
