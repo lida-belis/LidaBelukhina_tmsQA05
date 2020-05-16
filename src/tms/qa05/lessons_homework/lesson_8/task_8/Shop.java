@@ -4,7 +4,7 @@ import java.util.Objects;
 
 public class Shop {
     private String name;
-    private Integer ID;
+    private Integer ID; / ID -> id
 
     public Shop(String name, Integer ID) {
         this.name = name;
@@ -27,6 +27,7 @@ public class Shop {
         this.ID = this.ID;
     }
 
+    / hashCode() есть, а где equals? они всегда должны быть переопределены вместе
     @Override
     public int hashCode() {
         return Objects.hash(name, ID);
