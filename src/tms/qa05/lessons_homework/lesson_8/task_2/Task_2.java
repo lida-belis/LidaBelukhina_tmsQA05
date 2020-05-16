@@ -8,11 +8,13 @@ public class Task_2 {
     public static void main(String[] args) {
         List<Integer> integers = new ArrayList<>();
 
+        / заполнение в отдельный метод
         for (int i = 0; i <= 100; i++) {
             integers.add(0, i);
         }
         System.out.println(integers);
 
+        / удаление в отдельный метод
         Iterator<Integer> iterator = integers.iterator();
         while (iterator.hasNext()) {
             Integer next = iterator.next();
