@@ -8,16 +8,19 @@ public class Task_1 {
     public static void main(String[] args) {
         List<String> listOfName = new ArrayList<>();
 
-        listOfName.add("Lida");
-        listOfName.add("Vladimir");
-        listOfName.add("Irina");
-        listOfName.add("Yaroslav");
+        listOfName.add("lida");
+        listOfName.add("vladimir");
+        listOfName.add("irina");
+        listOfName.add("yaroslav");
 
-        // вынеси получение имени от пользователя в отдельный метод
+        GettingAName(listOfName);
+    }
+
+    public static void GettingAName(List<String> list){
         Scanner scanner = new Scanner(System.in);
         System.out.println("Person: " );
-        String string = scanner.next();
 
-        System.out.println("Can pass: " + listOfName.contains(string));
+        String name = scanner.next().toLowerCase();
+        System.out.println("Can pass: " + list.contains(name));
     }
 }

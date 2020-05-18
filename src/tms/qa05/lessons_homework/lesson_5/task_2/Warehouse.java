@@ -9,11 +9,7 @@ public class Warehouse {
         this.array = Arrays.copyOf(array, array.length);
     }
 
-    public String toString() {
-        return "Array{ " + Arrays.toString(array);
-    }
-
-    public void next() {
+    public int next() {
         for (int i = 0; i <= array.length; i++) {
             if (i == array.length) {
                 System.out.println(array[0]);
@@ -21,9 +17,15 @@ public class Warehouse {
                 System.out.println(array[i]);
             }
         }
+        return 1; // нужно вернуть один элемент массива
     }
 
     public int[] getArray() {
         return array;
     }
+
+    public String toString() {
+        return "Array{ " + Arrays.toString(array);
+    }
+
 }

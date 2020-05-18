@@ -4,7 +4,7 @@ public interface House {
 
     void numberOfFloors();
 
-    void turnOnHeating();
+    boolean turnOnHeating();
 
     void numberOfResidents();
 }

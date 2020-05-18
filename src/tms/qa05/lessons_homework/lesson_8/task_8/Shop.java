@@ -4,11 +4,11 @@ import java.util.Objects;
 
 public class Shop {
     private String name;
-    private Integer ID; / ID -> id
+    private Integer id;
 
     public Shop(String name, Integer ID) {
         this.name = name;
-        this.ID = ID;
+        this.id = ID;
     }
 
     public String getName() {
@@ -20,23 +20,32 @@ public class Shop {
     }
 
     public Integer getID() {
-        return ID;
+        return id;
     }
 
     public void setID(Integer ID) {
-        this.ID = this.ID;
+        this.id = this.id;
     }
 
-    / hashCode() есть, а где equals? они всегда должны быть переопределены вместе
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Shop shop = (Shop) o;
+        return Objects.equals(name, shop.name) &&
+                Objects.equals(id, shop.id);
+    }
+
     @Override
     public int hashCode() {
-        return Objects.hash(name, ID);
+        return Objects.hash(name, id);
     }
+
     @Override
     public String toString() {
         return "Shop{" +
                 "name=" + name +
-                ", ID=" + ID +
+                ", ID=" + id +
                 '}';
     }
 }

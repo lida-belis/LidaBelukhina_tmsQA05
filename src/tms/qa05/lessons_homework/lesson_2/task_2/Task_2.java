@@ -6,7 +6,7 @@ public class Task_2 {
         for (int i = 1;i < 9; i++) {
             // 9 - это этапы. То есть 1 этап = 3 часам
            if (i % 3 == 0);
-           ameba = ameba * 2;
+               ameba = ameba * 2;
 
            System.out.println("Ameba after " + i + " stages " + ameba);
         }

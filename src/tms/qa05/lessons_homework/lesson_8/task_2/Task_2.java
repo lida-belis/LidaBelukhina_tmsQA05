@@ -7,22 +7,38 @@ import java.util.List;
 public class Task_2 {
     public static void main(String[] args) {
         List<Integer> integers = new ArrayList<>();
+        int numberOfElements = 100;
 
-        / заполнение в отдельный метод
-        for (int i = 0; i <= 100; i++) {
-            integers.add(0, i);
-        }
+        add(integers, numberOfElements);
         System.out.println(integers);
 
-        / удаление в отдельный метод
-        Iterator<Integer> iterator = integers.iterator();
+        removeEven(integers);
+        System.out.println("==After==");
+        System.out.println(integers);
+    }
+
+    private static void add(List<Integer> list, int numberOfElements) {
+        for (int i = 0; i < numberOfElements; i++) {
+            list.add(0, i);
+        }
+    }
+
+    private static void removeOdd(List<Integer> list) {
+        remove(list, false);
+    }
+
+    private static void removeEven(List<Integer> list) {
+        remove(list, true);
+    }
+
+    private static void remove(List<Integer> list, boolean isEvenFlag) {
+        Iterator<Integer> iterator = list.iterator();
         while (iterator.hasNext()) {
             Integer next = iterator.next();
-            if (next % 2 == 0) {
+            boolean isEven = next % 2 == 0;
+            if (isEven == isEvenFlag) {
                 iterator.remove();
             }
         }
-        System.out.println("==After==");
-        System.out.println(integers);
     }
 }

@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 
 // +
-public class Task_4 {
+public class Task_3 {
     public static void main(String[] args) {
         List<String> strings = new ArrayList<>();
 

@@ -5,22 +5,22 @@ import java.util.Arrays;
 public class Task_6 {
     public static void main(String[] args) {
         String[] words = {"Green", "Warm", "Food", "Wine",  };
-        int array = 0; // array -> filteredArraySize
-        int k = 0; // k - стоит переименовать
+        int filteredArraySize = 0;
 
         // эту логику в отдельный метод
         for (int i = 0; i < words.length; i++) {
             if (words[i].toUpperCase().startsWith("W")) {
-                array++;
+                filteredArraySize++;
             }
         }
         
         // эту логику в отдельный метод
-        String[] findWords = new String[array];
+        String[] findWords = new String[filteredArraySize];
+        int count = 0;
         for (int i = 0; i < words.length; i++) {
             if (words[i].toUpperCase().startsWith("W")) {
-                findWords[k] = words[i];
-                k++;
+                findWords[count] = words[i];
+                count++;
             }
         }
         System.out.println(Arrays.toString(findWords));

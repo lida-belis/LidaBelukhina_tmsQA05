@@ -8,12 +8,13 @@ public class ExecutionQueue {
     }
 
     {
-        msg = "regular init blok";
+        msg = "regular init block";
     }
 
     public ExecutionQueue() {
         msg = "constructor value";
-    }// абзац
+    }
+
     public String toShow() {
         return msg;
     }

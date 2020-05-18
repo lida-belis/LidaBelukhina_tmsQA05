@@ -4,7 +4,7 @@ public class Task_3 {
     public static void main(String[] args){
         int num_1 = 1;
         int num_2 = 1;
-        for (int i = 1; i < 257; i++) {
+        for (int i = 1; i <= 256; i++) {
             num_1 *= 2;
             num_2 += num_1;
             i = num_1;

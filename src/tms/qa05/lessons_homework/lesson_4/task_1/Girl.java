@@ -9,32 +9,33 @@ public class Girl {
     private int age;
 
     public Girl() {
-// пустая строка не нужна
         this("Lida", 20);
-    } // абзац
+    }
+
     public Girl(String name, int age) {
         this.name = name;
         this.age = age;
     }
     public String getName() {
-// пустая строка не нужна
         return name;
-    }// абзац
+    }
+
     public int getAge() {
-// пустая строка не нужна
         return age;
-    }// абзац
+    }
+
     public String show() {
         return "name = " + this.name + ";" + " age = " + this.age + ";";
-    }// абзац
+    }
+
     public String showText() {
-// пустая строка не нужна
         return text;
     }
+
     public void setText(String text) {
-// пустая строка не нужна
         this.text = text;
-    }// абзац
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
