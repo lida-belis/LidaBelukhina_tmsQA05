@@ -2,6 +2,7 @@ package tms.qa05.lessons_homework.lesson_8.task_7;
 
 import java.util.Objects;
 
+// +
 public class Numbers implements Comparable<Numbers> {
     private int number;
 
