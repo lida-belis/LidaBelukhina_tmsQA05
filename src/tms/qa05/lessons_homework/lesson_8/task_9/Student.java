@@ -3,7 +3,7 @@ package tms.qa05.lessons_homework.lesson_8.task_9;
 import java.util.Objects;
 
 // +
-public class Student implements Comparable<Student> {
+public class Student {
     private String name;
     private String surname;
     private int age;
@@ -60,24 +60,5 @@ public class Student implements Comparable<Student> {
                 ", surname='" + surname + '\'' +
                 ", age=" + age +
                 '}';
-    }
-
-    @Override
-    public int compareTo(Student student) {
-        int nameResult = this.name.compareTo(student.getName());
-        if (nameResult < 0) {
-            return nameResult;
-        }
-        if (nameResult > 0) {
-            return nameResult;
-        }
-        int surnameResult = this.surname.compareTo(student.getSurname());
-        if (surnameResult < 0) {
-            return surnameResult;
-        }
-        if (surnameResult > 0) {
-            return surnameResult;
-        }
-        return this.age - student.getAge();
     }
 }

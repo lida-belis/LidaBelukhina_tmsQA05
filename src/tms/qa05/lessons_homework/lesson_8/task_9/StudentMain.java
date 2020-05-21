@@ -9,8 +9,6 @@ public class StudentMain {
         StudentSurnameComparator surnameComparator = new StudentSurnameComparator();
         Comparator<Student> studentComparator = surnameComparator.thenComparing(new StudentsNameComparator());
 
-// если ты используешь два отдельных компаратора, то зачем тогда внутри класса Student имплементить Comparable
-// это два разных подхода, в этой задаче можно выбрать один        
         Set<Student> students = new TreeSet<>(studentComparator);
         students.add(new Student("Lida", "Belukhina", 19));
         students.add(new Student("Jana", "Razymova", 19));
